@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Header from '@/components/ui/header'
+import Footer from '@/components/ui/footer'
+import clsx from 'clsx'
+import { noto, mono } from '@/app/fonts'
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -15,8 +16,18 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en">
-            <body className={inter.className}>{children}</body>
+        <html lang="ja">
+            <body
+                className={clsx(
+                    'flex flex-col min-h-screen',
+                    noto.variable,
+                    mono.variable
+                )}
+            >
+                <Header />
+                <main className="grow mt-12 md:mt-20 mb-36">{children}</main>
+                <Footer />
+            </body>
         </html>
     )
 }
