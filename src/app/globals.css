@@ -2,32 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.inner {
+  @apply max-w-6xl w-full px-4 md:px-16;
+  margin-inline: auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h1 {
+  @apply mt-16 mb-6;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h2 {
+  @apply mt-16 mb-6;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
+h3 {
+  @apply mt-10 mb-6;
+}
+
+h4 {
+  @apply mt-10 mb-4;
+}
+
+h5 {
+  @apply mt-10 mb-4;
+}
+
+h6 {
+  @apply mt-6 mb-4;
+}
+
+.article-wrapper {
+  @apply prose
+    max-w-none
+    break-words;
+}
