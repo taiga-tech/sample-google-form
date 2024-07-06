@@ -25,7 +25,7 @@ export default function RootLayout({
                 )}
             >
                 <Header />
-                <main className="grow mt-12 md:mt-20 mb-36">{children}</main>
+                <main className="grow">{children}</main>
                 <Footer />
             </body>
         </html>
