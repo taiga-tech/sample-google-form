@@ -19,7 +19,7 @@ const ThemeChange = ({ className }: { className?: string }) => {
                 className="btn btn-ghost btn-circle"
                 area-label="theme-change"
             >
-                <SunIcon className='h-6 w-6' />
+                <SunIcon className="h-6 w-6" />
             </div>
             <ul
                 tabIndex={0}
