@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# google form generator
 
-## Getting Started
+## Description
 
-First, run the development server:
+GoogleフォームをNext.jsで完全オリジナルデザインで構築します。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+デモでは[daisyui](https://daisyui.com/components/checkbox/)で構築しております。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### google form
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+https://docs.google.com/forms/d/e/1FAIpQLSef0lyI1bMqQRlX6Yh2fobh9-4pz8WtLs7CjssIC9x6QGpqNA/viewform
 
-## Learn More
+### spreadsheets
 
-To learn more about Next.js, take a look at the following resources:
+## Reference
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   https://zenn.dev/yurukei20/articles/9741118bfb5ee0
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Supported
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   [x] text field
+-   [x] textarea
+-   [x] radio button
+-   [x] checkbox
+-   [x] select field
+-   [x] rating
+-   [ ] file upload
+    -   [ ] google auth
+-   [ ] data
+-   [ ] time
