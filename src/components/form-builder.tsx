@@ -79,10 +79,10 @@ const FormBuilder = ({ fields }: FormBuilderProps) => {
     } = useForm({
         // defaultValues: schema.cast(),
         defaultValues,
-        resolver: yupResolver(schema, {
-            stripUnknown: true,
-            abortEarly: false,
-        }),
+        // resolver: yupResolver(schema, {
+        //     stripUnknown: true,
+        //     abortEarly: false,
+        // }),
         criteriaMode: 'all',
         mode: 'all',
     })
