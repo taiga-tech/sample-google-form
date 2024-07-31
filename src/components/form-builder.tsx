@@ -22,16 +22,16 @@ import { jpConfig } from '@/lib/yup.locale'
 
 export type Status = 'initial' | 'loading' | 'failure' | 'sent'
 
-export interface FormProps {
-    company: string
-    name: string
-    kana: string
-    tel: string
-    email: string
-    category: string
-    message: string
-    confirm: boolean
-}
+// export interface FormProps {
+//     company: string
+//     name: string
+//     kana: string
+//     tel: string
+//     email: string
+//     category: string
+//     message: string
+//     confirm: boolean
+// }
 
 const isObjectEmpty = (obj: any) => Boolean(Object.keys(obj).length)
 
@@ -39,34 +39,27 @@ interface FormBuilderProps {
     fields: InputFieldProps[]
 }
 
-const API_ENDPOINT = ''
+const API_ENDPOINT =
+    'https://docs.google.com/forms/u/0/d/e/1FAIpQLSef0lyI1bMqQRlX6Yh2fobh9-4pz8WtLs7CjssIC9x6QGpqNA/formResponse'
 
 const FormBuilder = ({ fields }: FormBuilderProps) => {
     const [status, setStatus] = useState<Status>('initial')
     const [success, setSuccess] = useState(false)
     const [faild, setFaild] = useState(false)
-    const form: FormProps = {
-        company: '',
-        name: '',
-        kana: '',
-        tel: '',
-        email: '',
-        category: '',
-        message: '',
-        confirm: false,
-    }
+
+    const defaultValues = fields.map((f) => ({ [f.name]: '', confirm: false }))
 
     const schema = yup
         .object({
-            company: yup.string().required(),
-            name: yup.string().required(),
-            kana: yup.string().required(),
-            tel: yup.string().required(),
-            email: yup.string().required().email(),
-            // category: yup.string(),
-            // .required()
-            // .oneOf(['A', 'B'], 'お問い合わせ項目を選択してください'),
-            message: yup.string(),
+            // company: yup.string().required(),
+            // name: yup.string().required(),
+            // kana: yup.string().required(),
+            // tel: yup.string().required(),
+            // email: yup.string().required().email(),
+            // // category: yup.string(),
+            // // .required()
+            // // .oneOf(['A', 'B'], 'お問い合わせ項目を選択してください'),
+            // message: yup.string(),
             confirm: yup
                 .bool()
                 .default(false)
@@ -85,7 +78,7 @@ const FormBuilder = ({ fields }: FormBuilderProps) => {
         formState: { errors },
     } = useForm({
         // defaultValues: schema.cast(),
-        defaultValues: form,
+        defaultValues,
         resolver: yupResolver(schema, {
             stripUnknown: true,
             abortEarly: false,
