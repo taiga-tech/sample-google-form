@@ -24,10 +24,10 @@ export const RatingField = ({
             <div className="rating">
                 {options?.map((option) => (
                     <input
-                        key={option.label}
+                        key={'rate-' + option.label}
                         type="radio"
                         value={option.value}
-                        // checked={option == '1'}
+                        checked={option.value === '1'}
                         className="mask mask-star-2 bg-orange-400"
                         {...register(name)}
                     />

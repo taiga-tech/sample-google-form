@@ -1,11 +1,11 @@
-import { UseFormRegister } from 'react-hook-form'
 export interface DefaultFieldProps {
-    register: (name: string) => UseFormRegister<
-        {
-            [x: string]: string | boolean
-            confirm: boolean
-        }[]
-    >
+    register: any
+    // (name: string) => UseFormRegister<
+    //     {
+    //         [x: string]: string | boolean
+    //         confirm: boolean
+    //     }[]
+    // >
     name: string
     label: string
     placeholder?: string

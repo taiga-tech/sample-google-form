@@ -82,7 +82,7 @@ const FormBuilder = ({ fields }: FormBuilderProps) => {
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="inner">
             <div className="grid grid-cols-3 gap-4 md:gap-8">
-                {fields.map((f: any) => (
+                {fields.map((f) => (
                     <f.component
                         key={f.label}
                         register={register}

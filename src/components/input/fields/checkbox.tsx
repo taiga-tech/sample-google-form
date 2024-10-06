@@ -22,8 +22,8 @@ export const CheckboxField = ({
         <div className="col-span-full md:col-span-2 grid grid-cols-4 gap-4">
             {options?.map((option) => (
                 <label
+                    key={'check-' + option.label}
                     className="label cursor-pointer col-span-2 lg:col-span-1"
-                    key={option.value}
                 >
                     <span className="label-text">{option.label}</span>
                     <input
