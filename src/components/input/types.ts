@@ -15,7 +15,7 @@ export interface TextAreaProps extends DefaultFieldProps {
 }
 
 export interface WithOptionFieldProps extends DefaultFieldProps {
-    options?: { label: string; value: string }[] | string[]
+    options: { label: string; value: string }[] | string[]
 }
 
 export interface DateFieldProps extends DefaultFieldProps {}
