@@ -1,5 +1,5 @@
 // types
-import { } from '@/components/input/types'
+import { WithOptionFieldProps } from '@/components/input/types'
 // clsx
 import clsx from 'clsx'
 
@@ -11,7 +11,7 @@ export const RatingField = ({
     required = false,
     className,
     errors,
-}: any) => (
+}: WithOptionFieldProps) => (
     <>
         <label className={clsx('col-span-1 md:col-span-1', className)}>
             <span className="label-text">

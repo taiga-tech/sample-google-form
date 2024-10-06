@@ -1,17 +1,17 @@
 // types
-import { WithOptionFieldProps } from '@/components/input/types'
+import { DateFieldProps } from '@/components/input/types'
 // clsx
 import clsx from 'clsx'
 
-export const SelectField = ({
+export const DateField = ({
     register,
     name,
     label,
-    options,
+    placeholder,
     required = false,
     className,
     errors,
-}: WithOptionFieldProps) => (
+}: DateFieldProps) => (
     <>
         <label className={clsx('col-span-full md:col-span-1', className)}>
             <span className="label-text">
@@ -20,19 +20,15 @@ export const SelectField = ({
             </span>
         </label>
         <div className="col-span-full md:col-span-2">
-            <select
+            <input
+                className={clsx(
+                    'input input-bordered w-full',
+                    errors[name] && 'input-error focus:outline-error'
+                )}
                 {...register(name)}
-                className="select select-bordered  block w-full"
-            >
-                <option disabled value="">
-                    選択してください
-                </option>
-                {options.map((option: any) => (
-                    <option value={option.value} key={option.value}>
-                        {option.label}
-                    </option>
-                ))}
-            </select>
+                placeholder={placeholder}
+                type="date"
+            />
             <label className="label">
                 <span className="label-text-alt text-error">
                     {errors[name] && errors[name].message}

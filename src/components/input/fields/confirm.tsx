@@ -1,18 +1,16 @@
 // types
-import {} from /*ConfirmProps*/ '@/components/input/types'
+import { TextFieldProps } from '@/components/input/types'
 // clsx
 import clsx from 'clsx'
 
-export const Confirm = (
-    {
-        register,
-        name,
-        label,
-        required = false,
-        className,
-        errors,
-    }: any /*ConfirmProps*/
-) => (
+export const Confirm = ({
+    register,
+    name,
+    label,
+    required = false,
+    className,
+    errors,
+}: TextFieldProps) => (
     <label
         className={clsx('col-span-full inline-flex cursor-pointer', className)}
     >

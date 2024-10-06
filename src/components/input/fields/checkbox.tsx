@@ -1,19 +1,17 @@
 // types
-import {} from '@/components/input/types'
+import { WithOptionFieldProps } from '@/components/input/types'
 // clsx
 import clsx from 'clsx'
 
-export const CheckboxField = (
-    {
-        register,
-        name,
-        label,
-        options,
-        required = false,
-        className,
-        errors,
-    }: any /*RadioFieldProps*/
-) => (
+export const CheckboxField = ({
+    register,
+    name,
+    label,
+    options,
+    required = false,
+    className,
+    errors,
+}: WithOptionFieldProps) => (
     <>
         <label className={clsx('col-span-full md:col-span-1', className)}>
             <span className="label-text">
