@@ -27,7 +27,7 @@ export const SelectField = ({
                 <option disabled value="">
                     選択してください
                 </option>
-                {options.map((option) => (
+                {options?.map((option) => (
                     <option value={option.value} key={option.value}>
                         {option.label}
                     </option>

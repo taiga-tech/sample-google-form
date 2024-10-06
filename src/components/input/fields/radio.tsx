@@ -20,7 +20,7 @@ export const RadioField = ({
             </span>
         </label>
         <div className="col-span-full md:col-span-2 grid grid-cols-4 gap-4">
-            {options.map((option) => (
+            {options?.map((option) => (
                 <label
                     className="label cursor-pointer col-span-2 md:col-span-1"
                     key={option.value}

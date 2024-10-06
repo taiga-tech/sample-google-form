@@ -1,5 +1,11 @@
-export type DefaultFieldProps = {
-    register: any
+import { UseFormRegister } from 'react-hook-form'
+export interface DefaultFieldProps {
+    register: (name: string) => UseFormRegister<
+        {
+            [x: string]: string | boolean
+            confirm: boolean
+        }[]
+    >
     name: string
     label: string
     placeholder?: string
@@ -20,7 +26,7 @@ export interface TextAreaProps extends DefaultFieldProps {
 }
 
 export interface WithOptionFieldProps extends DefaultFieldProps {
-    options: OptionProps[]
+    options?: OptionProps[]
 }
 
 export interface DateFieldProps extends DefaultFieldProps {}
