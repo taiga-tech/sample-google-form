@@ -1,12 +1,15 @@
 // components
 import {
     CheckboxField,
+    Confirm,
+    DateField,
+    DateTimeField,
     RadioField,
+    RatingField,
+    SelectField,
     TextArea,
     TextField,
-    SelectField,
-    RatingField,
-    Confirm,
+    TimeField,
 } from '@/components/input/fields'
 
 export interface InputFieldProps {
@@ -75,8 +78,24 @@ export const fields: InputFieldProps[] = [
         options: ['1', '2', '3', '4', '5'],
         required: false,
     },
-    // date
-    // time
+    {
+        component: DateTimeField,
+        name: 'entry.?????',
+        label: '日付時間',
+        required: false,
+    },
+    {
+        component: DateField,
+        name: 'entry.???',
+        label: '日付',
+        required: false,
+    },
+    {
+        component: TimeField,
+        name: 'entry.????',
+        label: '時間',
+        required: false,
+    },
     {
         component: Confirm,
         name: 'confirm',
