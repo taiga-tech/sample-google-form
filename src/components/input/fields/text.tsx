@@ -21,13 +21,13 @@ export const TextField = ({
         </label>
         <div className="col-span-full md:col-span-2">
             <input
+                type="text"
                 className={clsx(
                     'input input-bordered w-full',
                     errors[name] && 'input-error focus:outline-error'
                 )}
-                {...register(name)}
                 placeholder={placeholder}
-                type="text"
+                {...register(name)}
             />
             <label className="label">
                 <span className="label-text-alt text-error">

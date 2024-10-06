@@ -23,9 +23,9 @@ export const TextArea = ({
         <div className="col-span-full md:col-span-2">
             <textarea
                 className="textarea textarea-bordered w-full"
-                {...register(name)}
                 placeholder={placeholder}
                 rows={rows}
+                {...register(name)}
             />
             <label className="label">
                 <span className="label-text-alt text-error">

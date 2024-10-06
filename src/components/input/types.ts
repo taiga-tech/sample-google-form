@@ -9,8 +9,8 @@ export type DefaultFieldProps = {
 }
 
 export interface OptionProps {
-    label: string;
-    value: string;
+    label: string
+    value: string
 }
 
 export interface TextFieldProps extends DefaultFieldProps {}

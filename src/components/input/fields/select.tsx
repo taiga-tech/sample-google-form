@@ -21,13 +21,13 @@ export const SelectField = ({
         </label>
         <div className="col-span-full md:col-span-2">
             <select
-                {...register(name)}
                 className="select select-bordered  block w-full"
+                {...register(name)}
             >
                 <option disabled value="">
                     選択してください
                 </option>
-                {options.map((option: OptionProps) => (
+                {options.map((option) => (
                     <option value={option.value} key={option.value}>
                         {option.label}
                     </option>

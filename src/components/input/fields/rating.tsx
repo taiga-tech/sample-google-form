@@ -22,14 +22,14 @@ export const RatingField = ({
 
         <div className="col-span-2 md:col-span-2">
             <div className="rating">
-                {options.map((option: OptionProps) => (
+                {options.map((option) => (
                     <input
                         key={option.label}
-                        name={name}
+                        type="radio"
                         value={option.value}
                         // checked={option == '1'}
-                        type="radio"
                         className="mask mask-star-2 bg-orange-400"
+                        {...register(name)}
                     />
                 ))}
             </div>
