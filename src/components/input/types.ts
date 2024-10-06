@@ -8,6 +8,11 @@ export type DefaultFieldProps = {
     errors: any
 }
 
+export interface OptionProps {
+    label: string;
+    value: string;
+}
+
 export interface TextFieldProps extends DefaultFieldProps {}
 
 export interface TextAreaProps extends DefaultFieldProps {
@@ -15,7 +20,7 @@ export interface TextAreaProps extends DefaultFieldProps {
 }
 
 export interface WithOptionFieldProps extends DefaultFieldProps {
-    options: { label: string; value: string }[] | string[]
+    options: OptionProps[]
 }
 
 export interface DateFieldProps extends DefaultFieldProps {}
