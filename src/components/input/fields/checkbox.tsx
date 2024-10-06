@@ -1,5 +1,5 @@
 // types
-import { WithOptionFieldProps } from '@/components/input/types'
+import { WithOptionFieldProps, OptionProps } from '@/components/input/types'
 // clsx
 import clsx from 'clsx'
 
@@ -20,7 +20,7 @@ export const CheckboxField = ({
             </span>
         </label>
         <div className="col-span-full md:col-span-2 grid grid-cols-4 gap-4">
-            {options.map((option: any) => (
+            {options.map((option: OptionProps) => (
                 <label
                     className="label cursor-pointer col-span-2 lg:col-span-1"
                     key={option.value}

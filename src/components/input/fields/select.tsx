@@ -1,5 +1,5 @@
 // types
-import { WithOptionFieldProps } from '@/components/input/types'
+import { WithOptionFieldProps, OptionProps } from '@/components/input/types'
 // clsx
 import clsx from 'clsx'
 
@@ -27,7 +27,7 @@ export const SelectField = ({
                 <option disabled value="">
                     選択してください
                 </option>
-                {options.map((option: any) => (
+                {options.map((option: OptionProps) => (
                     <option value={option.value} key={option.value}>
                         {option.label}
                     </option>

@@ -1,5 +1,5 @@
 // types
-import { WithOptionFieldProps } from '@/components/input/types'
+import { WithOptionFieldProps, OptionProps } from '@/components/input/types'
 // clsx
 import clsx from 'clsx'
 
@@ -22,11 +22,11 @@ export const RatingField = ({
 
         <div className="col-span-2 md:col-span-2">
             <div className="rating">
-                {options.map((option: any) => (
+                {options.map((option: OptionProps) => (
                     <input
-                        key={option}
+                        key={option.label}
                         name={name}
-                        value={option}
+                        value={option.value}
                         // checked={option == '1'}
                         type="radio"
                         className="mask mask-star-2 bg-orange-400"
