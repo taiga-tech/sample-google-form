@@ -1,4 +1,4 @@
-export interface TextFieldProps {
+export type DefaultFieldProps = {
     register: any
     name: string
     label: string
@@ -8,12 +8,16 @@ export interface TextFieldProps {
     errors: any
 }
 
-export interface TextAreaProps extends TextFieldProps {
+export interface TextFieldProps extends DefaultFieldProps {}
+
+export interface TextAreaProps extends DefaultFieldProps {
     rows?: number
 }
 
-export interface SelectFieldProps extends TextFieldProps {
-    options: any
+export interface WithOptionFieldProps extends DefaultFieldProps {
+    options?: { label: string; value: string }[] | string[]
 }
 
-export type CheckboxProps = TextFieldProps
+export interface DateFieldProps extends DefaultFieldProps {}
+export interface TimeFieldProps extends DefaultFieldProps {}
+export interface DateTimeFieldProps extends DefaultFieldProps {}
