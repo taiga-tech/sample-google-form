@@ -12,15 +12,32 @@ import {
     TimeField,
 } from '@/components/input/fields'
 
+import {
+    TextFieldProps,
+    TextAreaProps,
+    WithOptionFieldProps,
+    DateFieldProps,
+    DateTimeFieldProps,
+    TimeFieldProps,
+    OptionProps,
+} from '@/components/input/types'
+
 export interface InputFieldProps {
-    component: any
+    component: React.ComponentType<
+        | TextFieldProps
+        | TextAreaProps
+        | WithOptionFieldProps
+        | DateFieldProps
+        | TimeFieldProps
+        | DateTimeFieldProps
+    >
     name: string
     label: string
     required: boolean
     placeholder?: string
     className?: string
     rows?: number
-    options?: { label: string; value: string }[] | string[]
+    options?: OptionProps[]
 }
 
 export const fields: InputFieldProps[] = [
@@ -75,7 +92,13 @@ export const fields: InputFieldProps[] = [
         component: RatingField,
         name: 'entry.1599741165',
         label: 'レーティング',
-        options: ['1', '2', '3', '4', '5'],
+        options: [
+            { label: '1', value: '1' },
+            { label: '2', value: '2' },
+            { label: '3', value: '3' },
+            { label: '4', value: '4' },
+            { label: '5', value: '5' },
+        ],
         required: false,
     },
     {
